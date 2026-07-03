@@ -1,0 +1,13 @@
+{
+  "repository_owner": "@community_user (mandatory)",
+  "drivers": [
+    {
+      "id": "driver_unique_id (mandatory)",
+      "status": "enum (mandatory): stable | experimental | ignore | deprecated | delete",
+      "path": "string/path to driver root (mandatory)",
+      "version": "string (optional)",
+      "readme": "string/path to driver readme (optional)",
+      "changelog": "string/path to driver changelog (optional)"
+    }
+  ]
+}
