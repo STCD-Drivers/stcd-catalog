@@ -1,2 +1,2 @@
 # stcd-catalog
-Project main driver containing the Driver Catalog.
+Project main repository containing the Driver Catalog.
