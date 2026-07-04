@@ -1,0 +1,24 @@
+name: Test SmartThings Refresh
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Refresh token
+        env:
+          ST_REFRESH_TOKEN: ${{ secrets.ST_REFRESH_TOKEN }}
+        run: |
+          RESPONSE=$(curl -s -X POST \
+            "https://auth-global.api.smartthings.com/oauth/token" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "grant_type=refresh_token" \
+            -d "client_id=d18cf96e-c626-4433-bf51-ddbb10c5d1ed" \
+            -d "refresh_token=$ST_REFRESH_TOKEN")
+
+          echo "$RESPONSE"
+
+          echo "$RESPONSE" | jq .
