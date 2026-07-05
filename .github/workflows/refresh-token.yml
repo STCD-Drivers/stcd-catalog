@@ -5,8 +5,8 @@ on:
 
   schedule:
     # diariamente às 03:00 UTC
-    #- cron: "0 3 * * *"
-    - cron: "0 * * * *"
+    - cron: "0 3 * * *"
+    #- cron: "0 * * * *"
 
 jobs:
   refresh:
